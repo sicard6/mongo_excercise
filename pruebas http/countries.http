@@ -1,0 +1,44 @@
+//Obtener todos los paises
+GET http://localhost:8080/countries HTTP/1.1
+content-type: application/json
+
+###
+
+//Obtener un pais
+GET http://localhost:8080/countries/Genovia HTTP/1.1
+content-type: application/json
+
+###
+
+// Colocar un pais
+
+POST http://localhost:8080/countries HTTP/1.1
+content-type: application/json
+
+{
+    "country":"Genovia",
+    "population":9923,
+    "continent":"Europa",
+    "lifeExpectancy":43.8,
+    "purchasingPower":974.58
+}
+
+###
+
+//Borrar un pais
+DELETE http://localhost:8080/countries/Genovia HTTP/1.1
+content-type: application/json
+
+###
+
+//actualizar un pais
+PUT http://localhost:8080/countries/Genovia HTTP/1.1
+content-type: application/json
+
+{
+    "country":"Genovia",
+    "population":0,
+    "continent":"Europa",
+    "lifeExpectancy":0,
+    "purchasingPower":0
+}
